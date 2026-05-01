@@ -9,7 +9,15 @@ const memberRoutes  = require('./routes/members');
 
 const app = express();
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://teamtaskmanager.vercel.app' // baad mein actual Vercel URL se replace karna
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 app.use('/api/auth',     authRoutes);
