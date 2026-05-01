@@ -13,7 +13,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://teamtaskmanager.vercel.app' // baad mein actual Vercel URL se replace karna
+    'https://team-task-manager-alpha-gules.vercel.app' // actual Vercel URL
   ],
   credentials: true
 }));
