@@ -204,4 +204,5 @@ TeamTaskManager/
 
 ## 📄 License
 
-MIT — free to use and modify.
+© 2026 Raj Kumar. All Rights Reserved.
+This project and its source code may not be copied, modified, distributed, or used for commercial purposes without explicit written permission from the author.
