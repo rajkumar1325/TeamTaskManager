@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator');
 const pool = require('../config/db');
 const router = express.Router();
 
-// POST /api/auth/signup
+// POST --->>>>.  /api/auth/signup
 router.post('/signup', [
   body('name').notEmpty().withMessage('Name is required'),
   body('email').isEmail().withMessage('Valid email required'),
@@ -43,7 +43,7 @@ router.post('/signup', [
   }
 });
 
-// POST /api/auth/login
+// POST --->>>>.  /api/auth/login
 router.post('/login', [
   body('email').isEmail().withMessage('Valid email required'),
   body('password').notEmpty().withMessage('Password required'),

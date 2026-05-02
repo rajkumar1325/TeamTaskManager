@@ -10,16 +10,17 @@ const memberRoutes  = require('./routes/members');
 const app = express();
 
 // app.use(cors());
-app.use(cors({
+app.use(cors({ 
   origin: [
-    'http://localhost:5173',
-    'https://team-task-manager-alpha-gules.vercel.app' // actual Vercel URL
+    'http://localhost:5173', 
+    'https://team-task-manager-alpha-gules.vercel.app' // Vercel URL
   ],
   credentials: true
 }));
 
 app.use(express.json());
 
+// Route setup
 app.use('/api/auth',     authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks',    taskRoutes);

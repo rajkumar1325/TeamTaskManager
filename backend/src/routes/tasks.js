@@ -23,7 +23,7 @@ router.get('/my', authMW, async (req, res) => {
   }
 });
 
-// GET /api/tasks/project/:projectId — all tasks in a project
+// GET /api/tasks/project/:projectId ---- all tasks in a project
 router.get('/project/:projectId', authMW, async (req, res) => {
   try {
     // First check user is actually a member of this project
@@ -51,7 +51,7 @@ router.get('/project/:projectId', authMW, async (req, res) => {
   }
 });
 
-// POST /api/tasks — create a task (admin only)
+// POST /api/tasks -- create a task (admin only)
 router.post('/', authMW, [
   body('title').notEmpty().withMessage('Title required'),
   body('project_id').notEmpty().withMessage('Project ID required'),

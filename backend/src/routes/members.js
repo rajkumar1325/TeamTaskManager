@@ -3,7 +3,7 @@ const pool = require('../config/db');
 const authMW = require('../middleware/auth');
 const router = express.Router();
 
-// GET /api/projects/:id/members — get all members of a project
+// GET /api/projects/:id/members — getting the all members of a project
 router.get('/:id/members', authMW, async (req, res) => {
   try {
     const result = await pool.query(`
@@ -19,7 +19,7 @@ router.get('/:id/members', authMW, async (req, res) => {
   }
 });
 
-// GET /api/projects/:id/find-user?email=... — look up a user by email (admin only)
+// GET /api/projects/:id/find-user?email= (admin only)
 router.get('/:id/find-user', authMW, async (req, res) => {
   // Check project-level admin role (not global role)
   const roleCheck = await pool.query(

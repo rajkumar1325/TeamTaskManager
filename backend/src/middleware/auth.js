@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-module.exports = (req, res, next) => {
+module.exports = (req, res, next) => { //Middlwware to auth JWT
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
